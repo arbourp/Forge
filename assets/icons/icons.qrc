@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/wallet_icons">
+        <file>Back_24px.png</file>
+        <file>Discord_24px.png</file>
+        <file>Forward_24px.png</file>
+        <file>Menu_24px.png</file>
+        <file>Synchronize_24px.png</file>
+    </qresource>
+</RCC>

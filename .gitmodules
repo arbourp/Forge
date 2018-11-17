@@ -1,0 +1,4 @@
+[submodule "extern/amitycoin"]
+	path = extern/amitycoin
+	url = https://github.com/CalexCore/AmityCoin.git
+	branch = dev
