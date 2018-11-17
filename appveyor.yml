@@ -34,7 +34,7 @@ build_script:
       } else {
         $CMakeGenerator = "Visual Studio 15 2017 Win64"
         $CMakeBoostArg = "-DBOOST_ROOT=C:/Libraries/boost_1_67_0"
-        $QtArgs = "-DCMAKE_PREFIX_PATH="C:/Qt/5.11.2/msvc2017_64"
+        $QtArgs = "-DCMAKE_PREFIX_PATH=C:/Qt/5.11.2/msvc2017_64"
       }
 
   # build process
