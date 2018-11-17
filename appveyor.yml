@@ -26,12 +26,15 @@ build_script:
 
   # select cmake generator and boost version
   - ps: |
+      $ErrorActionPreference = "Stop"
       if ($isLinux) {
         $CMakeGenerator = "Unix Makefiles"
         $CMakeBoostArg = ""
+        $QtArgs = ""
       } else {
         $CMakeGenerator = "Visual Studio 15 2017 Win64"
         $CMakeBoostArg = "-DBOOST_ROOT=C:/Libraries/boost_1_67_0"
+        $QtArgs = "-DCMAKE_PREFIX_PATH="C:/Qt/5.11.2/msvc2017_64"
       }
 
   # build process
@@ -41,7 +44,7 @@ build_script:
         -G "$CMakeGenerator" `
         -DCMAKE_BUILD_TYPE=$configuration `
         -DCMAKE_INSTALL_PREFIX:PATH=../.install `
-        $CMakeBoostArg `
+        $CMakeBoostArg $QtArgs `
         ..
       cmake --build . --config $configuration
       Pop-Location
